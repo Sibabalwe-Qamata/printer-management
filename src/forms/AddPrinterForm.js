@@ -24,11 +24,11 @@ const AddPrinterForm = props => {
                 // );
 			}}
 		>
-			<label>Name</label>
+			<label>Printer Name</label>
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
-			<label>Ip</label>
+			<label>Printer Ip</label>
 			<input type="text" name="ip" value={user.ip} onChange={handleInputChange} />
-            <label>Status</label>
+            <label>Status (active/inactive)</label>
 			<input type="text" name="status" value={user.status} onChange={handleInputChange} />
 			<button>Add new printer</button>
 		</form>
