@@ -10,7 +10,7 @@ import './App.css';
 
 const App = () => {
 	// Data
-	const usersData = [
+	const printersData = [
 		{ id: 1, name: 'Canon', ip: '120.34.24.34',status:'active' },
 		{ id: 2, name: 'Hp', ip: '136.245.42.63', status:'inactive' },
 		{ id: 3, name: 'Samsung', ip: '136.452.42.36', status:'active' },
@@ -19,7 +19,7 @@ const App = () => {
 	const initialFormState = { id: null, name: '', ip: '' , status:''}
 
 	// Setting state
-	const [ users, setUsers ] = useState(usersData)
+	const [ users, setUsers ] = useState(printersData)
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
@@ -54,7 +54,7 @@ const App = () => {
 				<div className="flex-large">
 					{editing ? (
 						<Fragment>
-							<h2>Edit user</h2>
+							<h2>Edit printer</h2>
 							<EditPrinterForm
 								editing={editing}
 								setEditing={setEditing}

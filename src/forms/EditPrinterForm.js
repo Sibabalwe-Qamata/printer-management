@@ -31,7 +31,7 @@ const EditPrinterForm = props => {
       <input type="text" name="ip" value={user.ip} onChange={handleInputChange} />
       <label>Status</label>
       <input type="text" name="status" value={user.status} onChange={handleInputChange} />
-      <button>Update user</button>
+      <button>Update printer</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
       </button>
