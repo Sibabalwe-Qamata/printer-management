@@ -11,12 +11,12 @@ import './App.css';
 const App = () => {
 	// Data
 	const usersData = [
-		{ id: 1, name: 'Tania', username: 'floppydiskette' },
-		{ id: 2, name: 'Craig', username: 'siliconeidolon' },
-		{ id: 3, name: 'Ben', username: 'benisphere' },
+		{ id: 1, name: 'Canon', ip: '120.34.24.34',status:'active' },
+		{ id: 2, name: 'Hp', ip: '136.245.42.63', status:'inactive' },
+		{ id: 3, name: 'Samsung', ip: '136.452.42.36', status:'active' },
 	]
 
-	const initialFormState = { id: null, name: '', username: '' }
+	const initialFormState = { id: null, name: '', ip: '' , status:''}
 
 	// Setting state
 	const [ users, setUsers ] = useState(usersData)
@@ -44,7 +44,7 @@ const App = () => {
 	const editRow = user => {
 		setEditing(true)
 
-		setCurrentUser({ id: user.id, name: user.name, username: user.username })
+		setCurrentUser({ id: user.id, name: user.name, ip: user.ip , status: user.status })
 	}
 
 	return (
@@ -64,7 +64,7 @@ const App = () => {
 						</Fragment>
 					) : (
 						<Fragment>
-							<h2>Add user</h2>
+							<h2>Add printer</h2>
 							<AddPrinterForm addUser={addUser} />
 						</Fragment>
 					)}
@@ -77,26 +77,5 @@ const App = () => {
 		</div>
 	)
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//          Printer Management System.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

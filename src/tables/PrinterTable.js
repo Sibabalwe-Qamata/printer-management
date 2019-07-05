@@ -5,7 +5,7 @@ const PrinterTable = props => (
     <thead>
       <tr>
         <th>Name</th>
-        <th>Username</th>
+        <th>Ip</th>
         <th>Status</th>
         <th>Actions</th>
       </tr>
@@ -15,8 +15,8 @@ const PrinterTable = props => (
         props.users.map(user => (
           <tr key={user.id}>
             <td>{user.name}</td>
-            <td>{user.username}</td>
-            <td>{user.username}</td>
+            <td>{user.ip}</td>
+            <td>{user.status}</td>
             <td>
               <button
                 onClick={() => {

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 
 const AddPrinterForm = props => {
-	const initialFormState = { id: null, name: '', username: '', status:'' }
+	const initialFormState = { id: null, name: '', ip: '', status:'' }
 	const [ user, setUser ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -14,7 +14,7 @@ const AddPrinterForm = props => {
 		<form
 			 async onSubmit={event => {
 				event.preventDefault()
-				if (!user.name || !user.username || !user.status) return
+				if (!user.name || !user.ip || !user.status) return
 
 				props.addUser(user)
                 setUser(initialFormState)
@@ -27,7 +27,7 @@ const AddPrinterForm = props => {
 			<label>Name</label>
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
 			<label>Ip</label>
-			<input type="text" name="username" value={user.username} onChange={handleInputChange} />
+			<input type="text" name="ip" value={user.ip} onChange={handleInputChange} />
             <label>Status</label>
 			<input type="text" name="status" value={user.status} onChange={handleInputChange} />
 			<button>Add new printer</button>
